@@ -41,6 +41,10 @@ def main():
     if args.test_server:
         configure_for_tests()
 
+    if args.no_start:
+        print("Not starting webui because --no-start was passed.")
+        exit(0)
+        
     start()
 
 
